@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кузнецкинвестстрой — Инвест Капитал</title>
+  <meta name="description" content="Инвест Капитал — инвестиции и управление проектами в недвижимости, промышленности, энергетике и фармацевтике.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/style.css">
+  <style>
+    /* Боковые поля страницы */
+    .container { padding-left: 24px !important; padding-right: 24px !important; box-sizing: border-box !important; }
+    /* Уменьшенные отступы между разделами (в 3 раза) */
+    .section { padding-top: 24px !important; padding-bottom: 24px !important; }
+    .page-hero { padding-top: 32px !important; padding-bottom: 20px !important; }
+    .hero { padding-top: 32px !important; padding-bottom: 16px !important; }
+    .hero + .section { padding-top: 8px !important; margin-top: 0 !important; }
+    .section + .section { margin-top: 0 !important; }
+    .section > .container > h2,
+    .reasons-title { margin-top: 0 !important; margin-bottom: 16px !important; }
+    .about-blocks { padding-top: 16px !important; }
+    .stats-row, .stats-column { margin-top: 8px !important; }
+    /* Колонка статистики справа от лозунга на главной */
+    .hero-stats { margin-top: 0 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; }
+    .hero .hero-grid { display: flex !important; flex-wrap: wrap !important; gap: 32px !important; align-items: flex-start !important; width: 100% !important; }
+    .hero .hero-text { flex: 2 1 0 !important; min-width: 0 !important; max-width: none !important; }
+    /* Причины на главной — «1. Опыт» одной строкой, тем же шрифтом */
+    .hero-reasons-list .reason-card {
+      display: block !important;
+    }
+    .hero-reasons-list .reason-num { display: none !important; }
+    .hero-reasons-list h3 {
+      display: block !important;
+      font: inherit !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      margin: 0 !important;
+    }
+    .hero-reasons-list p {
+      margin: 4px 0 0 !important;
+      font-family: inherit !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+      color: inherit !important;
+      opacity: 0.9 !important;
+    }
+    /* Главный заголовок на главной */
+    .hero-main-title {
+      margin: 0 0 24px !important;
+      font-size: 44px !important;
+      font-weight: 800 !important;
+      line-height: 1.1 !important;
+    }
+    /* Фото с play-кнопкой */
+    .hero-teaser {
+      position: relative !important;
+      margin-top: 0 !important;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100% !important;
+      max-width: none !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .hero-teaser img { width: 100%; height: 100%; display: block; border-radius: 16px; object-fit: cover; }
+    .hero-teaser .play-btn {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: translate(-50%, -50%) !important;
+      margin: 0 !important;
+      width: 72px; height: 72px; color: #fff; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); border-radius: 50%; transition: background 0.2s;
+    }
+    .hero-teaser .play-btn:hover { background: rgba(0,0,0,0.55); }
+    .hero-teaser .play-btn svg { width: 100%; height: 100%; }
+    /* Причины справа, в столбик — 1/3 ширины, компактные по высоте */
+    .hero-reasons { margin: 0 !important; flex: 1 1 0 !important; min-width: 0 !important; width: auto !important; max-width: none !important; }
+    .hero-reasons-list { display: flex !important; flex-direction: column !important; gap: 8px !important; }
+    .hero-reasons-list .reason-card {
+      padding: 18px 16px !important;
+      width: auto !important;
+      height: auto !important;
+      min-height: 0 !important;
+      display: block !important;
+    }
+    @media (max-width: 860px) {
+      .hero .hero-grid { flex-direction: column !important; }
+      .hero .hero-text, .hero-reasons { flex: 1 1 auto !important; width: 100% !important; }
+      .hero-main-title { font-size: 32px !important; }
+    }
+    .projects-grid { margin-top: 12px !important; }
+    main > section:first-child { padding-top: 24px !important; }
+    .hero-text .hero-lead { margin-bottom: 0 !important; }
+    /* Логотип-эмблема — в шапке справа, с текстом рядом */
+    .site-header .header-inner { display: flex !important; align-items: center !important; }
+    .site-header .nav { order: 1 !important; margin-left: auto !important; gap: 20px !important; }
+    .site-header .header-right { order: 2 !important; margin-left: 20px !important; }
+    .site-header .logo {
+      order: 3 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      margin-left: 20px !important;
+    }
+    .site-header .logo:hover, .site-header .logo:focus, .site-header .logo:visited { color: inherit !important; }
+    .logo-img { height: 56px !important; width: auto !important; display: block !important; }
+    .logo-company-text {
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      color: #7ed957 !important;
+      white-space: nowrap !important;
+      order: -1 !important;
+    }
+    /* В подвале логотип убран — остаются только адрес и копирайт */
+
+    /* ---------- Страница проекта ---------- */
+    .project-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; align-items: start; }
+    .project-cover { border-radius: 16px; overflow: hidden; }
+    .project-cover img { width: 100%; height: 280px; object-fit: cover; display: block; border-radius: 16px; }
+    .project-intro .project-dir { font-size: 14px; font-weight: 600; color: #7ed957; margin-bottom: 8px; }
+    .project-intro p { margin: 0 0 10px; line-height: 1.5; }
+    @media (max-width: 860px) { .project-top { grid-template-columns: 1fr; } }
+
+    /* KPI-карточки */
+    .kpi-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .kpi-card { background: rgba(126, 217, 87, 0.08); border: 1px solid rgba(126, 217, 87, 0.25); border-radius: 14px; padding: 18px 16px; }
+    .kpi-value { font-size: 30px; font-weight: 800; line-height: 1.05; color: #7ed957; }
+    .kpi-label { margin-top: 6px; font-size: 14px; line-height: 1.3; opacity: 0.85; }
+    @media (max-width: 860px) { .kpi-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .kpi-row { grid-template-columns: 1fr; } }
+
+    /* Диаграммы в зелёной гамме */
+    .chart-block { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(126, 217, 87, 0.18); border-radius: 16px; padding: 20px 22px; }
+    .chart-legend { display: flex; gap: 20px; margin-bottom: 16px; flex-wrap: wrap; }
+    .legend-item { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; opacity: 0.9; }
+    .swatch { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+    .swatch--muted { background: #2f6b3a; }
+    .swatch--bright { background: #7ed957; }
+    .chart-rows { display: flex; flex-direction: column; gap: 16px; }
+    .chart-row { display: grid; grid-template-columns: minmax(140px, 230px) 1fr; gap: 16px; align-items: center; }
+    .chart-label { font-size: 14px; line-height: 1.25; opacity: 0.9; }
+    .chart-bars { display: flex; flex-direction: column; gap: 5px; }
+    .chart-bar-line { display: flex; align-items: center; gap: 10px; }
+    .chart-bar { height: 16px; border-radius: 4px; min-width: 2px; transition: width 0.4s ease; }
+    .chart-bar--muted { background: #2f6b3a; }
+    .chart-bar--bright { background: #7ed957; }
+    .chart-value { font-size: 13px; font-weight: 600; opacity: 0.85; white-space: nowrap; }
+    .chart-note { margin: 16px 0 0; font-size: 13px; }
+    @media (max-width: 640px) { .chart-row { grid-template-columns: 1fr; gap: 6px; } }
+
+    /* Подвал — адрес и копирайт в одну строку */
+    .site-footer .footer-grid { display: flex !important; justify-content: flex-end !important; }
+    .site-footer .footer-col { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 8px 20px !important; }
+    .site-footer .footer-col p { margin: 0 !important; }
+
+    /* Кликабельные карточки проектов */
+    a.project-card-link { display: block; text-decoration: none; color: inherit; transition: transform 0.2s ease; }
+    a.project-card-link:hover { transform: translateY(-4px); }
+    a.project-card-link:hover h3 { color: #7ed957; }
+  </style>
+</head>
+<body>
+
+<div class="foliage-bg" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../../" class="logo">
+      <span class="logo-company-text">Инвест Капитал</span>
+      <img src="../../static/img/logo-white.png" alt="Инвест Капитал" class="logo-img">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="../../about/" class="nav-link">О компании</a>
+      <a href="../../experience/" class="nav-link">Наш опыт</a>
+      <a href="../../latest-projects/" class="nav-link">Последние проекты</a>
+      <a href="../../contacts/" class="nav-link">Контакты</a>
+    </nav>
+    <div class="header-right">
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs">
+      <a href="../../">Главная</a> /
+      <a href="../../latest-projects/">Последние проекты</a> /
+      Кузнецкинвестстрой
+    </div>
+    <h1>Кузнецкинвестстрой</h1>
+    <p class="lead">Результаты работы управляющей компании, 2024–2025 гг.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="project-top">
+      <div class="project-cover">
+        <img src="../../static/img/proj-kisk.png" alt="Кузнецкинвестстрой">
+      </div>
+      <div class="project-intro">
+        <div class="project-dir">Управление производственными процессами</div>
+        <p>Открытая добыча угля в Новокузнецком муниципальном округе Кемеровской области — Кузбасса.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="kpi-row">
+      
+      <div class="kpi-card">
+        <div class="kpi-value">↓1 078 млн ₽</div>
+        <div class="kpi-label">снижение кредитных обязательств</div>
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-value">↓191 млн ₽</div>
+        <div class="kpi-label">снижение административных расходов</div>
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-value">↓150 млн ₽ в год</div>
+        <div class="kpi-label">перевод Предприятия на прямые продажи</div>
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-value">в 2,5 раза</div>
+        <div class="kpi-label">снижены налоговые претензии</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="reasons-title" style="text-align:left;">Снижение размера кредитных обязательств, млн ₽</h2>
+    <div class="chart-block">
+      <div class="chart-legend">
+        
+        <span class="legend-item"><i class="swatch swatch--muted"></i>01.11.2024</span>
+        
+        <span class="legend-item"><i class="swatch swatch--bright"></i>08.12.2025</span>
+        
+      </div>
+      <div class="chart-rows">
+        
+        <div class="chart-row">
+          <div class="chart-label">ВТБ</div>
+          <div class="chart-bars">
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--muted"
+                   style="width: 100.0%;"></div>
+              <span class="chart-value">700</span>
+            </div>
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--bright"
+                   style="width: 42.9%;"></div>
+              <span class="chart-value">300</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">Альфа-Банк</div>
+          <div class="chart-bars">
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--muted"
+                   style="width: 54.1%;"></div>
+              <span class="chart-value">379</span>
+            </div>
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--bright"
+                   style="width: 8.6%;"></div>
+              <span class="chart-value">60</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">Солид Банк</div>
+          <div class="chart-bars">
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--muted"
+                   style="width: 14.3%;"></div>
+              <span class="chart-value">100</span>
+            </div>
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--bright"
+                   style="width: 0.0%;"></div>
+              <span class="chart-value">0</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">ЮниКредит</div>
+          <div class="chart-bars">
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--muted"
+                   style="width: 8.4%;"></div>
+              <span class="chart-value">59</span>
+            </div>
+            
+            <div class="chart-bar-line">
+              <div class="chart-bar chart-bar--bright"
+                   style="width: 0.0%;"></div>
+              <span class="chart-value">0</span>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      <p class="chart-note muted">01.11.2024 → 08.12.2025 · единицы: млн ₽</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      
+      <article class="about-card">
+        <div class="eyebrow">01. Кредитный портфель</div>
+        <h3>Анализ и оптимизация кредитных обязательств</h3>
+        <ul class="tick-list">
+          
+          <li>Исходный объём кредитных обязательств — 1,2 млрд ₽, ковенанты по соглашениям с банками нарушены.</li>
+          
+          <li>Проведён анализ движения денежных средств, разработаны мероприятия по устранению кассовых разрывов.</li>
+          
+          <li>Ранжирование обязательств и приоритезация договоров для досрочного погашения.</li>
+          
+          <li>Реализован план-график досрочного погашения без нарушения ключевых платежей (зарплата, налоги).</li>
+          
+          <li>Реструктуризация кредита ПАО ВТБ на сумму более 500 млн ₽ на 12 месяцев на льготных условиях, без дополнительного обеспечения.</li>
+          
+          <li>Ежемесячный платёж снижен на 50% — с 66 млн ₽ до 33 млн ₽.</li>
+          
+          <li>Итог: снижение совокупных обязательств на 878 млн ₽ (−71%), экономия процентных расходов ~200 млн ₽.</li>
+          
+        </ul>
+      </article>
+      
+      <article class="about-card">
+        <div class="eyebrow">02. Оптимизация расходов</div>
+        <h3>Аудит и сокращение затрат</h3>
+        <ul class="tick-list">
+          
+          <li>Аудит расходов на содержание управленческого персонала — экономия 191 млн ₽ в год.</li>
+          
+          <li>Предприятие переведено на прямые продажи: расторгнут агентский договор с ООО «Коэклеричи Раша» — экономия 150 млн ₽ в год.</li>
+          
+          <li>Налоговые претензии по выездной проверке 2022–2024 гг. снижены с 356,9 млн ₽ до 141,5 млн ₽.</li>
+          
+          <li>Снижение непринимаемых в целях налогообложения расходов на 444 млн ₽.</li>
+          
+          <li>11 автомобилей выведены из эксплуатации как непрофильные активы и подготовлены к реализации на торгах.</li>
+          
+        </ul>
+      </article>
+      
+      <article class="about-card">
+        <div class="eyebrow">03. Финансовая отчётность и аудит</div>
+        <h3>Повышение качества учёта и достоверности отчётности</h3>
+        <ul class="tick-list">
+          
+          <li>Полная инвентаризация имущества — выявлены излишки ТМЦ на 124 млн ₽, поставлены на баланс.</li>
+          
+          <li>Разработан и утверждён Регламент движения ТМЦ, назначены ответственные лица.</li>
+          
+          <li>Автоматизирован расчёт отложенных налогов по ПБУ 18/02 в 1С:Управление холдингом.</li>
+          
+          <li>Внесены изменения элементов амортизации ОС по ФСБУ 6/2020, восстановлен учёт НМА по ФСБУ 14/2022.</li>
+          
+          <li>Проведён налоговый аудит силами УК, составлена карта налоговых рисков.</li>
+          
+          <li>Сформировано уведомление о КИК за 2024 год — позволило избежать штрафа 500 тыс. ₽.</li>
+          
+        </ul>
+      </article>
+      
+      <article class="about-card">
+        <div class="eyebrow">04. Автоматизация бизнес-процессов</div>
+        <h3>Планирование закупок и складские запасы</h3>
+        <ul class="tick-list">
+          
+          <li>Выявлено отсутствие нормирования складских запасов и планирования закупок — следствие затоваривания складов.</li>
+          
+          <li>Разработана форма плана закупок с учётом аналитики прошлых периодов (3 года), списаний и ожидаемых поступлений.</li>
+          
+          <li>Внедрено ежемесячное планирование закупок товаров, работ и услуг под фактические потребности предприятия.</li>
+          
+          <li>Отчёт по планированию закупок полностью автоматизирован в 1С:Управление холдингом.</li>
+          
+          <li>Актуализированы нормы СИЗ — обеспечение работников с минимальными затратами предприятия.</li>
+          
+        </ul>
+      </article>
+      
+      <article class="about-card">
+        <div class="eyebrow">05. Правовое сопровождение</div>
+        <h3>Урегулирование задолженности и защита интересов</h3>
+        <ul class="tick-list">
+          
+          <li>Урегулирована кредиторская задолженность перед ООО «ОТЭКО-Порт сервис» (порт «Тамань») — сумма уменьшена на 35%, порядка 270 тыс. $.</li>
+          
+          <li>По спору с АО «Мурманский морской торговый порт» о неустойке свыше 200 млн ₽ заявлены встречные требования к порту на сумму более 180 млн ₽.</li>
+          
+          <li>Урегулирована задолженность более 500 млн ₽ через соглашения о рассрочке без штрафов — экономия не менее 35 млн ₽.</li>
+          
+          <li>Пересмотрены тарифы на услуги дочернего ООО «ЮК ПТУ» — предприятие выведено в прибыль.</li>
+          
+          <li>Исключено присоединение к Федеральному отраслевому соглашению на 2025–2028 гг. — предотвращён рост социальных расходов на десятки млн ₽ в год.</li>
+          
+          <li>Прекращены договорные отношения с аффилированными прежним собственником структурами и подозрительные сделки (агентская схема, консалтинг).</li>
+          
+        </ul>
+      </article>
+      
+      <article class="about-card">
+        <div class="eyebrow">06. Цифровизация и ИТ-инфраструктура</div>
+        <h3>Корпоративные системы и информационная безопасность</h3>
+        <ul class="tick-list">
+          
+          <li>Внедрён электронный документооборот с контрагентами (ЭДО): маршруты согласования, контроль сроков, электронная подпись, разграничение доступа.</li>
+          
+          <li>Внедрена 1С:Управление холдингом — ключевые функции предприятия в едином цифровом пространстве, план-фактный анализ с детализацией отклонений.</li>
+          
+          <li>Единая база данных исключает дублирование и ошибки ручного переноса; снижены затраты на бумагу, тонеры и оргтехнику.</li>
+          
+          <li>Модернизирован внешний сетевой контур — выполнены требования ФСТЭК для критически значимой инфраструктуры.</li>
+          
+          <li>Снижены риски заражения вредоносным ПО и сетевых атак; оперативная блокировка уязвимостей по обновляемым сигнатурам.</li>
+          
+          <li>Устойчивость к санкционным рискам — нет зависимости от зарубежного оборудования и техподдержки.</li>
+          
+          <li>Система резервного копирования: ежедневные и ежечасные копии, долговременные архивы на отчуждаемых носителях.</li>
+          
+          <li>Система мониторинга доменной среды — выявление точек атак и отслеживание действий пользователей и администраторов.</li>
+          
+          <li>Организован безопасный Due Diligence — предоставление информации потенциальным покупателям актива без риска утечки.</li>
+          
+        </ul>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a href="../../latest-projects/" class="btn btn--ghost">← Все проекты</a>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="muted">121108, город Москва, Рублёвское шоссе, дом 21, Бизнес-Центр Upside Кунцево</p>
+      <p class="muted">© ООО «Инвест Капитал», 2021–2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
