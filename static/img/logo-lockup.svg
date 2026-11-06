@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 8 372 148" role="img" aria-label="Инвест Капитал">
+  <defs>
+    <linearGradient id="gTop" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#9BEA84"/><stop offset="1" stop-color="#C6F5A8"/></linearGradient>
+    <linearGradient id="gLeft" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2E8B57"/><stop offset="1" stop-color="#5FC46E"/></linearGradient>
+    <linearGradient id="gRight" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#1F6B42"/><stop offset="1" stop-color="#43A45A"/></linearGradient>
+  </defs>
+    <polygon points="8,94 22,101.0 22,149.0 8,142" fill="url(#gLeft)"/>
+    <polygon points="36,94 22,101.0 22,149.0 36,142" fill="url(#gRight)"/>
+    <polygon points="8,94 22,87.0 36,94 22,101.0" fill="url(#gTop)"/>
+    <polyline points="8,118 22,125.0 36,118" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="22" y1="101.0" x2="22" y2="149.0" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="38,70 52,77.0 52,149.0 38,142" fill="url(#gLeft)"/>
+    <polygon points="66,70 52,77.0 52,149.0 66,142" fill="url(#gRight)"/>
+    <polygon points="38,70 52,63.0 66,70 52,77.0" fill="url(#gTop)"/>
+    <polyline points="38,94 52,101.0 66,94" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="38,118 52,125.0 66,118" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="52" y1="77.0" x2="52" y2="149.0" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="68,46 82,53.0 82,149.0 68,142" fill="url(#gLeft)"/>
+    <polygon points="96,46 82,53.0 82,149.0 96,142" fill="url(#gRight)"/>
+    <polygon points="68,46 82,39.0 96,46 82,53.0" fill="url(#gTop)"/>
+    <polyline points="68,70 82,77.0 96,70" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="68,94 82,101.0 96,94" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="68,118 82,125.0 96,118" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="82" y1="53.0" x2="82" y2="149.0" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="98,22 112,29.0 112,149.0 98,142" fill="url(#gLeft)"/>
+    <polygon points="126,22 112,29.0 112,149.0 126,142" fill="url(#gRight)"/>
+    <polygon points="98,22 112,15.0 126,22 112,29.0" fill="url(#gTop)"/>
+    <polyline points="98,46 112,53.0 126,46" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="98,70 112,77.0 126,70" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="98,94 112,101.0 126,94" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="98,118 112,125.0 126,118" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="112" y1="29.0" x2="112" y2="149.0" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+  <text x="152" y="78" fill="#FFFFFF" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="1.5">ИНВЕСТ</text>
+  <text x="155" y="130" fill="#8FE87E" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="400" letter-spacing="7">КАПИТАЛ</text>
+</svg>

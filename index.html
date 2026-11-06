@@ -110,13 +110,10 @@
       margin-left: 20px !important;
     }
     .site-header .logo:hover, .site-header .logo:focus, .site-header .logo:visited { color: inherit !important; }
-    .logo-img { height: 56px !important; width: auto !important; display: block !important; }
-    .logo-company-text {
-      font-size: 20px !important;
-      font-weight: 700 !important;
-      color: #7ed957 !important;
-      white-space: nowrap !important;
-      order: -1 !important;
+    /* логотип-замок: кубики и название одним файлом */
+    .logo-img { height: 54px !important; width: auto !important; display: block !important; }
+    @media (max-width: 860px) {
+      .logo-img { height: 42px !important; }
     }
     /* В подвале логотип убран — остаются только адрес и копирайт */
 
@@ -173,8 +170,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="./" class="logo">
-      <span class="logo-company-text">Инвест Капитал</span>
-      <img src="./static/img/logo-white.png" alt="Инвест Капитал" class="logo-img">
+      <img src="./static/img/logo-lockup.svg" alt="Инвест Капитал" class="logo-img">
     </a>
     <nav class="nav" id="nav">
       <a href="./about/" class="nav-link">О компании</a>

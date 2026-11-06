@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 20 176 170" role="img" aria-label="Инвест Капитал">
+  <defs>
+    <linearGradient id="gTop" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#9BEA84"/><stop offset="1" stop-color="#C6F5A8"/></linearGradient>
+    <linearGradient id="gLeft" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2E8B57"/><stop offset="1" stop-color="#5FC46E"/></linearGradient>
+    <linearGradient id="gRight" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#1F6B42"/><stop offset="1" stop-color="#43A45A"/></linearGradient>
+  </defs>
+    <polygon points="21,108 40,117.5 40,181.5 21,172" fill="url(#gLeft)"/>
+    <polygon points="59,108 40,117.5 40,181.5 59,172" fill="url(#gRight)"/>
+    <polygon points="21,108 40,98.5 59,108 40,117.5" fill="url(#gTop)"/>
+    <polyline points="21,140 40,149.5 59,140" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="40" y1="117.5" x2="40" y2="181.5" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="61,76 80,85.5 80,181.5 61,172" fill="url(#gLeft)"/>
+    <polygon points="99,76 80,85.5 80,181.5 99,172" fill="url(#gRight)"/>
+    <polygon points="61,76 80,66.5 99,76 80,85.5" fill="url(#gTop)"/>
+    <polyline points="61,108 80,117.5 99,108" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="61,140 80,149.5 99,140" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="80" y1="85.5" x2="80" y2="181.5" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="101,44 120,53.5 120,181.5 101,172" fill="url(#gLeft)"/>
+    <polygon points="139,44 120,53.5 120,181.5 139,172" fill="url(#gRight)"/>
+    <polygon points="101,44 120,34.5 139,44 120,53.5" fill="url(#gTop)"/>
+    <polyline points="101,76 120,85.5 139,76" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="101,108 120,117.5 139,108" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="101,140 120,149.5 139,140" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="120" y1="53.5" x2="120" y2="181.5" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polygon points="141,12 160,21.5 160,181.5 141,172" fill="url(#gLeft)"/>
+    <polygon points="179,12 160,21.5 160,181.5 179,172" fill="url(#gRight)"/>
+    <polygon points="141,12 160,2.5 179,12 160,21.5" fill="url(#gTop)"/>
+    <polyline points="141,44 160,53.5 179,44" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="141,76 160,85.5 179,76" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="141,108 160,117.5 179,108" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <polyline points="141,140 160,149.5 179,140" fill="none" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+    <line x1="160" y1="21.5" x2="160" y2="181.5" stroke="#0B2419" stroke-width="1.5" opacity=".6"/>
+</svg>
