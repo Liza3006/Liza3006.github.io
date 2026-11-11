@@ -121,6 +121,28 @@
        из-за чего пустые span схлопываются в нулевую ширину и полоски не видны */
     .burger span { width: 22px !important; }
 
+    /* style.css прячет меню под бургер уже на 960px, хотя трём ссылкам
+       хватает ~540px. Возвращаем обычное меню на промежуточных ширинах. */
+    @media (min-width: 621px) and (max-width: 960px) {
+      .site-header .nav {
+        position: static !important;
+        inset: auto !important;
+        background: none !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        gap: 18px !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      .site-header .burger { display: none !important; }
+    }
+
+    /* Контакты: карта убрана, вторая колонка больше не нужна */
+    .contacts-grid--single { grid-template-columns: 1fr !important; max-width: 640px; }
+
     /* логотип-замок: кубики и название одним файлом */
     .logo-img { height: 54px !important; width: auto !important; display: block !important; }
     @media (max-width: 860px) {

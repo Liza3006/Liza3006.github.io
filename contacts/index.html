@@ -121,6 +121,28 @@
        из-за чего пустые span схлопываются в нулевую ширину и полоски не видны */
     .burger span { width: 22px !important; }
 
+    /* style.css прячет меню под бургер уже на 960px, хотя трём ссылкам
+       хватает ~540px. Возвращаем обычное меню на промежуточных ширинах. */
+    @media (min-width: 621px) and (max-width: 960px) {
+      .site-header .nav {
+        position: static !important;
+        inset: auto !important;
+        background: none !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        gap: 18px !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      .site-header .burger { display: none !important; }
+    }
+
+    /* Контакты: карта убрана, вторая колонка больше не нужна */
+    .contacts-grid--single { grid-template-columns: 1fr !important; max-width: 640px; }
+
     /* логотип-замок: кубики и название одним файлом */
     .logo-img { height: 54px !important; width: auto !important; display: block !important; }
     @media (max-width: 860px) {
@@ -207,7 +229,7 @@
 </section>
 
 <section class="section">
-  <div class="container contacts-grid">
+  <div class="container contacts-grid contacts-grid--single">
     <div class="contacts-card">
       <div class="contact-item">
         <div class="contact-label">Адрес</div>
@@ -228,11 +250,11 @@
         <p class="muted">КПП 773101001</p>
         <p class="muted">ОГРН 1217700173877</p>
       </div>
+
+      <div class="contact-item">
+        <a href="https://yandex.ru/maps/-/CXrfnL67" target="_blank" rel="noopener" class="btn btn--ghost">Открыть в Яндекс.Картах</a>
+      </div>
     </div>
-    <div class="map-wrap">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23422e82e03c933958673fa17005df5fdfdc26d53b18c52d79b2d6d0fe073ca4&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script>
-    </div>
-    <a href="https://yandex.ru/maps/-/CXrfnL67" target="_blank" rel="noopener" class="btn btn--ghost" style="margin-top:16px">Открыть в Яндекс.Картах</a>
   </div>
 </section>
 
