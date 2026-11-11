@@ -140,8 +140,21 @@
       .site-header .burger { display: none !important; }
     }
 
-    /* Контакты: карта убрана, вторая колонка больше не нужна */
-    .contacts-grid--single { grid-template-columns: 1fr !important; max-width: 640px; }
+    /* Контакты: карта убрана, вторая колонка больше не нужна.
+       Карточка тянется по ширине контейнера, размеры — через clamp */
+    .contacts-grid--single { grid-template-columns: 1fr !important; }
+    .contacts-grid--single .contacts-card {
+      width: 100%;
+      padding: clamp(20px, 3vw, 36px) !important;
+    }
+    .contacts-grid--single .contact-value {
+      font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
+      line-height: 1.4;
+    }
+    .contacts-grid--single .contact-label {
+      font-size: clamp(.7rem, .9vw, .82rem) !important;
+    }
+    .contacts-map-btn { display: inline-block; margin-top: 16px; }
 
     /* логотип-замок: кубики и название одним файлом */
     .logo-img { height: 54px !important; width: auto !important; display: block !important; }
@@ -232,10 +245,6 @@
   <div class="container contacts-grid contacts-grid--single">
     <div class="contacts-card">
       <div class="contact-item">
-        <div class="contact-label">Адрес</div>
-        <div class="contact-value">121108, город Москва, Рублёвское шоссе, дом 21, Бизнес-Центр Upside Кунцево</div>
-      </div>
-      <div class="contact-item">
         <div class="contact-label">Телефон</div>
         <a href="tel:+74956412214" class="contact-value">8 (495) 641-22-14</a>
       </div>
@@ -252,7 +261,10 @@
       </div>
 
       <div class="contact-item">
-        <a href="https://yandex.ru/maps/-/CXrfnL67" target="_blank" rel="noopener" class="btn btn--ghost">Открыть в Яндекс.Картах</a>
+        <div class="contact-label">Адрес</div>
+        <div class="contact-value">121108, город Москва, Рублёвское шоссе, дом 21, Бизнес-Центр Upside Кунцево</div>
+        <a href="https://yandex.ru/maps/-/CXrfnL67" target="_blank" rel="noopener"
+           class="btn btn--ghost contacts-map-btn">Открыть в Яндекс.Картах</a>
       </div>
     </div>
   </div>

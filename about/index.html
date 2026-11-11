@@ -140,8 +140,21 @@
       .site-header .burger { display: none !important; }
     }
 
-    /* Контакты: карта убрана, вторая колонка больше не нужна */
-    .contacts-grid--single { grid-template-columns: 1fr !important; max-width: 640px; }
+    /* Контакты: карта убрана, вторая колонка больше не нужна.
+       Карточка тянется по ширине контейнера, размеры — через clamp */
+    .contacts-grid--single { grid-template-columns: 1fr !important; }
+    .contacts-grid--single .contacts-card {
+      width: 100%;
+      padding: clamp(20px, 3vw, 36px) !important;
+    }
+    .contacts-grid--single .contact-value {
+      font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
+      line-height: 1.4;
+    }
+    .contacts-grid--single .contact-label {
+      font-size: clamp(.7rem, .9vw, .82rem) !important;
+    }
+    .contacts-map-btn { display: inline-block; margin-top: 16px; }
 
     /* логотип-замок: кубики и название одним файлом */
     .logo-img { height: 54px !important; width: auto !important; display: block !important; }
